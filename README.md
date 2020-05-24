@@ -40,3 +40,22 @@ To change the background image for one of these sections, add the following line
 
 
 * [gist user kasuken](https://gist.github.com/kasuken/076d68b92e2a67dfda591587c77a40c0#file-profiles-json) - good profiles settings user kasuken on GitHub.
+
+
+#### Problems
+
+**`Microsoft.PowerShell_profile.ps1 cannot be loaded because running
+scripts is disabled on this system.`**
+
+As an *Administrator*, you can set the execution policy by typing this into your PowerShell window:
+```sh
+Set-ExecutionPolicy RemoteSigned
+```
+
+**`LF will be replaced by CRLF in`**
+
+Run the following command to git to convert all CRLF line endings to LF before it stores it in the commit:
+>$ git config --global core.autocrlf input
+
+Run the following command to prevent git from adding updates whose only function was to change the line-ending:
+>git config --global core.safecrlf true
